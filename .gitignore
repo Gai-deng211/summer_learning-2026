@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+*/venv/
+summer_26/
+postgresql/postgres_26/
+postgresql/.python-version
+sqlalchemy/sqlalchemy_26/
+sqlalchemy/.python-version
+fastapi/fastapi_26/
+fastapi/.python-version
+backend_lab/backend_lab_26/
+backend_lab/.python-version
+
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# uv
+.python-version
+
+# OS files
+.DS_Store

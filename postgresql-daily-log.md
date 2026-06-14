@@ -1,5 +1,7 @@
-# PostgreSQL + SQLAlchemy Daily Progress (June 13, 2026)
-## Today I successfully completed and validated my PostgreSQL + SQLAlchemy workflow in my Python project.
+# PostgreSQL + SQLAlchemy Daily Progress 
+# DATE: June 13, 2026: BASIC PostgreSQL Engine Setup
+### Summary
+    - Today I successfully completed and validated my PostgreSQL + SQLAlchemy workflow in my Python project.
 ### What I accomplished
     -   Established a working connection to a PostgreSQL database using SQLAlchemy
     -   Confirmed successful DB connectivity with:
@@ -25,3 +27,12 @@
     - Python ↔ PostgreSQL integration
     - SQLAlchemy as a database abstraction layer
     - Clean data output formatting for backend development
+
+## File Structure - See the files here for the source code. 
+```
+summer_learning_2026/
+└── postgresql/
+    └── app/
+        ├── psql-engine-setup.py     # ⬅️ Connection strings, raw sql queries here
+        └── .env                     # ⬅️ Database URL here as environment variable for security (No visible, remained in the local computer)
+ ```      

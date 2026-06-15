@@ -1,7 +1,7 @@
 # Resumes Updates
 ## Date: June 14th, 2026
 ### What I did:
-- Reviewed, updated, re-orgnanized my resume layout, flow, and consistency based on review coaching from BCIT Co-op training
+- Reviewed, updated, re-orgnanized my resume layout, flow, and consistency based on Resume coaching from BCIT Co-op training
 
 ### What was challenging
 - Fitting everything in one page

@@ -52,13 +52,13 @@ def experiment_results_withot_index():
         
         outputfile.write("# Date: June 16, 2026\n")
         outputfile.write("# Objective/Goal:\n```\nTo Analyze Query Performance with EXPLAIN ANALYZE on 500k postgreSQL rows of data.\n```\n ")
-        outputfile.write("## Experiment 1:\n```\nNo Index on salary column:\n```\n\n")
-        outputfile.write("METRICS:\n")
+        outputfile.write("## Experiment 1:\nConstrain:\n```\nNo Index on salary column:\n```\n\n")
+        outputfile.write("Metrics:\n")
         outputfile.write(f"```\n{planning_time}\n{execution_time}\n```\n\n\n")
    
         print("Done writing experiments to MD file!!\nBye😊😊😊")
     
-# experiment_results_withot_index() # DONE ✅✅✅
+experiment_results_withot_index() # DONE ✅✅✅
 
 def experiment_results_with_index():
     # create the index on salary column
@@ -84,12 +84,12 @@ def experiment_results_with_index():
     with open("../notes/experiments-explain-analyze.md", 'a') as outputfile:
         print("Connection successful!!✅✅✅\nNow writing to an MD file...")
         
-        outputfile.write("## Experiment 2:\n```\nIndex created on salary column:\n```\n\n")
-        outputfile.write("METRICS:\n")
+        outputfile.write("## Experiment 2:\nConstraint:\n```\nIndex created on salary column:\n```\n\n")
+        outputfile.write("Metrics:\n")
         outputfile.write(f"```\n{planning_time}\n{execution_time}\n```\n\n\n")
         
         # write a conclusion
-        outputfile.write(f"CONCLUSION\n")
+        outputfile.write(f"Conclusion\n")
         outputfile.write(f"```\nWith no index on the salary column, query execution is slower. Adding an index can greatly improve query execution time.\n```")
         print("Done writing experiments to MD file!!\nBye😊😊😊")
          

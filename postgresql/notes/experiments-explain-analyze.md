@@ -4,30 +4,32 @@
 To Analyze Query Performance with EXPLAIN ANALYZE on 500k postgreSQL rows of data.
 ```
  ## Experiment 1:
+Constrain:
 ```
 No Index on salary column:
 ```
 
-METRICS:
+Metrics:
 ```
-Planning Time: 0.470 ms
-Execution Time: 43.650 ms
+Planning Time: 0.363 ms
+Execution Time: 0.154 ms
 ```
 
 
 ## Experiment 2:
+Constraint:
 ```
 Index created on salary column:
 ```
 
-METRICS:
+Metrics:
 ```
-Planning Time: 0.248 ms
-Execution Time: 0.163 ms
+Planning Time: 0.293 ms
+Execution Time: 0.152 ms
 ```
 
 
-CONCLUSION
+Conclusion
 ```
 With no index on the salary column, query execution is slower. Adding an index can greatly improve query execution time.
 ```

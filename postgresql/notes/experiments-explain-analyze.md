@@ -4,15 +4,15 @@
 To Analyze Query Performance with EXPLAIN ANALYZE on 500k postgreSQL rows of data.
 ```
  ## Experiment 1:
-Constrain:
+Constraint:
 ```
 No Index on salary column:
 ```
 
 Metrics:
 ```
-Planning Time: 0.628 ms
-Execution Time: 84.754 ms
+Planning Time: 0.878 ms
+Execution Time: 74.361 ms
 ```
 
 
@@ -24,8 +24,8 @@ Index created on salary column:
 
 Metrics:
 ```
-Planning Time: 0.508 ms
-Execution Time: 0.266 ms
+Planning Time: 0.643 ms
+Execution Time: 0.401 ms
 ```
 
 

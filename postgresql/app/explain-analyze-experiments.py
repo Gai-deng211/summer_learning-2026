@@ -52,13 +52,13 @@ def experiment_results_withot_index():
         
         outputfile.write("# Date: June 16, 2026\n")
         outputfile.write("# Objective/Goal:\n```\nTo Analyze Query Performance with EXPLAIN ANALYZE on 500k postgreSQL rows of data.\n```\n ")
-        outputfile.write("## Experiment 1:\nConstrain:\n```\nNo Index on salary column:\n```\n\n")
+        outputfile.write("## Experiment 1:\nConstraint:\n```\nNo Index on salary column:\n```\n\n")
         outputfile.write("Metrics:\n")
         outputfile.write(f"```\n{planning_time}\n{execution_time}\n```\n\n\n")
    
         print("Done writing experiments to MD file!!\nBye😊😊😊")
     
-experiment_results_withot_index() # DONE ✅✅✅
+# experiment_results_withot_index() # DONE ✅✅✅
 
 def experiment_results_with_index():
     # create the index on salary column

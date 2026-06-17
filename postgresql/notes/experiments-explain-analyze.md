@@ -11,8 +11,8 @@ No Index on salary column:
 
 Metrics:
 ```
-Planning Time: 0.363 ms
-Execution Time: 0.154 ms
+Planning Time: 0.628 ms
+Execution Time: 84.754 ms
 ```
 
 
@@ -24,8 +24,8 @@ Index created on salary column:
 
 Metrics:
 ```
-Planning Time: 0.293 ms
-Execution Time: 0.152 ms
+Planning Time: 0.508 ms
+Execution Time: 0.266 ms
 ```
 
 

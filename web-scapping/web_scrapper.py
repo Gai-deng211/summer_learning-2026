@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright
+import time
 
 def whois_lookup(domain_url: str | None = None) -> str | None:
     """
@@ -15,12 +16,14 @@ def whois_lookup(domain_url: str | None = None) -> str | None:
         return None
     with sync_playwright() as p:
         try:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(headless=False)
             page = browser.new_page()
             page.goto("http://www.whois.com/")
             page.get_by_placeholder("Enter Domain or IP").type(domain_url, delay=300)
             page.keyboard.press("Enter")
             contents = page.locator(".whois-data").inner_text().split('\n')
+            time.sleep(3)
+            
             browser.close()
             return contents
         except Exception as ex:
@@ -110,4 +113,10 @@ def end_product(domain_url):
         print(f"❌❌ Error: Failed due to the error:\n{str(ex).splitlines()[0]}")
         
 if __name__ == "__main__":
-    print(end_product("utoronto.ca"))
+    results: dict[str, str | list[str]] = end_product("utoronto.ca")
+    print("\n\n")
+    print("=" * 20)
+    
+    for key, value in results.items():
+        print(key, ":", value)
+    print("\n")

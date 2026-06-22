@@ -70,7 +70,7 @@ def flatten_whois_data(data: dict[str, list[str]] | None = None) -> dict[str, st
         final_data[key] = value[0] if len(value) == 1 else value
     return final_data
 
-def final_data(data: dict[str, str | list[str] | None]) -> dict[str, str | list[str]] | None:
+def get_required_data(data: dict[str, str | list[str] | None]) -> dict[str, str | list[str]] | None:
     """
     Removes all fields except for a selected list of important WHOIS fields.
 
@@ -103,7 +103,7 @@ def end_product(domain_url):
         raw_whois_results = whois_lookup(domain_url)
         cleaned_data = clean_whois_data(raw_whois_results)
         flatten_results = flatten_whois_data(cleaned_data)
-        final_product = final_data(flatten_results)
+        final_product = get_required_data(flatten_results)
         print("✅✅✅ Success! Your request was processed")
         return final_product
     except Exception as ex:
